@@ -4,3 +4,7 @@ li .active {
     -webkit-background-clip: text !important;
     background-clip: text !important;
 }
+li{
+   font-size: x-large;
+}
+
