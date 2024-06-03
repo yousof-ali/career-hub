@@ -11,12 +11,14 @@ import Home from './Components/Home/Home.jsx';
 import Jobj from './Components/Jobs/Jobj.jsx';
 import Applied from './Components/Applied/Applied.jsx';
 import Blog from './Components/Blog/Blog.jsx';
+import Error from './Components/Error/Error.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:"/",
