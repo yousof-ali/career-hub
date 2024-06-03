@@ -1,0 +1,6 @@
+li .active {
+    background-image: linear-gradient(to right, #8190FA,#9675FA) !important;
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+}

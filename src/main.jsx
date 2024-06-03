@@ -8,6 +8,9 @@ import {
 } from "react-router-dom";
 import Root from './Components/Root/Root.jsx';
 import Home from './Components/Home/Home.jsx';
+import Jobj from './Components/Jobs/Jobj.jsx';
+import Applied from './Components/Applied/Applied.jsx';
+import Blog from './Components/Blog/Blog.jsx';
 
 
 const router = createBrowserRouter([
@@ -18,6 +21,18 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>
+      },
+      {
+        path:"/jobs",
+        element:<Jobj></Jobj>
+      },
+      {
+        path:"/applied",
+        element:<Applied></Applied>
+      },
+      {
+        path:"/blogs",
+        element:<Blog></Blog>
       }
     ]
   },
