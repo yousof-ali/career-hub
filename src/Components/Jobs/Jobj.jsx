@@ -1,9 +1,10 @@
+import Featured from "../Featured/Featured";
 
 
 const Jobj = () => {
     return (
         <div>
-            <h1>i am from job</h1>
+            <Featured></Featured>
         </div>
     );
 };

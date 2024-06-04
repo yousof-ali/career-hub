@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import useStyle from "../Styles/style";
 
 const Job = ({job}) => {
-    const {logo,job_title,company_name,remote_or_onsite,job_type,location,salary}=job
+    const {id,logo,job_title,company_name,remote_or_onsite,job_type,location,salary}=job
     const { btnStyle } = useStyle();
     return (
         <div className="text-gray-400   border-2 rounded-md p-4 space-y-3">
@@ -25,7 +26,7 @@ const Job = ({job}) => {
                 </div>
                 
             </div>
-            <button className={btnStyle}>View Details</button>
+            <Link to={`/job/${id}`}><button className={btnStyle}>View Details</button></Link>
         </div>
     );
 };

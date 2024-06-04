@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./header.css"
 
 import useStyle from "../Styles/style";
@@ -33,7 +33,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className={btnStyle}>Star Applying</a>
+                <Link to={"/apply"}><a className={btnStyle}>Start Applying</a></Link>
             </div>
         </div>
     );

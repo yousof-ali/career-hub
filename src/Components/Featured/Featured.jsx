@@ -1,15 +1,21 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import Job from "../Job/Job";
+import useStyle from "../Styles/style";
 
 
 const Featured = () => {
+    const [dataLength,setDataLength]=useState(4)
+    const { btnStyle } = useStyle();
+
     const [data,setData]=useState([])
     useEffect(() =>{
         fetch("/public/data/jobs.json")
         .then(res=>res.json())
         .then(data=>setData(data))
     },[])
+
+    
 
     return (
         <div>
@@ -19,8 +25,11 @@ const Featured = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 container mx-auto">
                 {
-                    data.map(job =><Job key={job.id} job={job}></Job>)
+                    data.slice(0,dataLength).map(job =><Job key={job.id} job={job}></Job>)
                 }
+            </div>
+            <div className={`text-center mt-10 ${data.length===dataLength && "hidden"}` }>
+                <button onClick={()=>setDataLength(data.length)} className={btnStyle}>Show All</button>
             </div>
         </div>
     );
