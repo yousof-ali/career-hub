@@ -72,7 +72,7 @@ const Applied = () => {
                         <ul className="p-2 absolute right-0  shadow menu dropdown-content z-[1] bg-base-100 rounded-box ">
                             <li><a onClick={()=>handleJobfilter("all")}>All</a></li>
                             <li><a  onClick={()=>handleJobfilter("remote")}>Remote</a></li>
-                            <li><a>Onsite</a></li>
+                            <li onClick={()=>handleJobfilter("onsite")}><a>Onsite</a></li>
                         </ul>
                     </details>
                 </div>
