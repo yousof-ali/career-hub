@@ -1,16 +1,25 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import useStyle from "../Styles/style";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "../Utility/localStorage";
+import { useState } from "react";
 
 
 const JobDetails = () => {
+    const[h,setH]=useState(false)
     const { id } = useParams()
     const {btnStyle}=useStyle()
     const data = useLoaderData()
     const job = data.find(single => single.id === parseInt(id));
-    console.log(job)
     const { job_description, job_responsibility, educational_requirements, experiences, salary, job_title, contact_information
 
     } = job
+    const tost =()=>{
+        saveJobApplication(parseInt(id))
+        toast("Your apply submit!");
+        setH(true)
+    }
     return (
         <div>
             <div className="p-24 relative bg-[#F9F9FF] ">
@@ -73,11 +82,12 @@ const JobDetails = () => {
                         </div>
                     </div>
                     <div className="text-center mx-auto mt-4 w-full lg:w-3/5">
-                        <button className={`w-full ${btnStyle}`}>Apply Now</button>
+                        <button onClick={tost} className={`w-full ${btnStyle} ${h&&"hidden"}`}>Apply Now</button>
                     </div>
                 </div>
 
             </div>
+            <ToastContainer />
         </div>
     );
 };
