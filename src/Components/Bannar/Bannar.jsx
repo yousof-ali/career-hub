@@ -1,5 +1,5 @@
 import useStyle from "../Styles/style";
-
+import user from "/images/user.png"
 
 const Bannar = () => {
     const { btnStyle } = useStyle();
@@ -14,7 +14,7 @@ const Bannar = () => {
                     </div>
                 </div>
                 <div className="flex-1">
-                    <img src="/public/images/user.png" alt="" />
+                    <img src={user} alt="" />
                 </div>
             </div>
         </div>

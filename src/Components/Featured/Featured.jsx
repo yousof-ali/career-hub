@@ -10,7 +10,7 @@ const Featured = () => {
 
     const [data,setData]=useState([])
     useEffect(() =>{
-        fetch("/public/data/jobs.json")
+        fetch("/data/jobs.json")
         .then(res=>res.json())
         .then(data=>setData(data))
     },[])

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import useStyle from '../Styles/style';
 import { Link } from 'react-router-dom';
 
@@ -22,11 +22,11 @@ const SingleAppliedJob = ({ singleAppliedJob }) => {
                         </div>
                         <div className="text-base flex gap-4">
                             <div className="flex items-center">
-                                <img src="/public/icons/location2.png" alt="" />
+                                <img src="/icons/location2.png" alt="" />
                                 <p>{location}</p>
                             </div>
                             <div className="flex items-center">
-                                <img src="/public/icons/money.png" alt="" />
+                                <img src="/icons/money.png" alt="" />
                                 <p>{salary}</p>
                             </div>
 

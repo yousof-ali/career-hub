@@ -16,12 +16,12 @@ const Applied = () => {
             console.log(data)
         }
         else if (filter==="remote"){
-            const remoteJobs = jobs.filter(job=>job.remote_or_onsite==='Remote');
+            const remoteJobs = data.filter(job=>job.remote_or_onsite==='Remote');
             setDisplayJobs(remoteJobs);
             console.log(remoteJobs)
         }
         else if(filter==="onsite"){
-            const onsite = jobs.filter(job=> job.remote_or_onsite==="Onsite");
+            const onsite = data.filter(job=> job.remote_or_onsite==="Onsite");
             setDisplayJobs(onsite)
             console.log(onsite)
         }
@@ -57,11 +57,11 @@ const Applied = () => {
             <div className="p-24 relative bg-[#F9F9FF] ">
 
                 <div className="absolute left-0 bottom-0">
-                    <img src="../../../public/images/bg1.png" alt="" />
+                    <img src="/images/bg1.png" alt="" />
                 </div>
                 <h2 className="text-3xl font-bold text-center  ">Applied Jobs</h2>
                 <div className=" absolute right-0 top-0 ">
-                    <img className="" src="../../../public/images/bg2.png" alt="" />
+                    <img className="" src="/images/bg2.png" alt="" />
                 </div>
             </div>
 

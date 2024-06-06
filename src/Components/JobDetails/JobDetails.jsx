@@ -25,11 +25,11 @@ const JobDetails = () => {
             <div className="p-24 relative bg-[#F9F9FF] ">
 
                 <div className="absolute left-0 bottom-0">
-                    <img src="../../../public/images/bg1.png" alt="" />
+                    <img src="/images/bg1.png" alt="" />
                 </div>
                 <h2 className="text-3xl font-bold text-center  ">Job Details</h2>
                 <div className=" absolute right-0 top-0 ">
-                    <img className="" src="../../../public/images/bg2.png" alt="" />
+                    <img className="" src="/images/bg2.png" alt="" />
                 </div>
             </div>
             <div className="container mx-auto my-8 md:px-0 px-2 md:my-16 gap-4 lg:gap-12 md:grid md:grid-cols-3 justify-between">
@@ -50,12 +50,12 @@ const JobDetails = () => {
                         <h2 className="text-xl font-bold">Job Details</h2>
                         <hr />
                         <div className="flex items-center gap-1">
-                            <img src="../../../public/icons/money.png" alt="" />
+                            <img src="/icons/money.png" alt="" />
                             <p className="text-gray-400"><span className="font-bold text-black">Salary : </span>{salary
                             } (Per Month)</p>
                         </div>
                         <div className="flex items-center gap-1">
-                            <img src="../../../public/icons/calendar.png" alt="" />
+                            <img src="/icons/calendar.png" alt="" />
                             <p className="text-gray-400"><span className="font-bold text-black">Job Title : </span>{job_title
 
                             }</p>
@@ -63,19 +63,19 @@ const JobDetails = () => {
                         <h2 className="text-xl font-bold ">Contact Information</h2>
                         <hr />
                         <div className="flex items-center gap-1">
-                            <img src="../../../public/icons/phone.png" alt="" />
+                            <img src="/icons/phone.png" alt="" />
                             <p className="text-gray-400"><span className="font-bold text-black">Phone : </span>{contact_information.phone
 
                             }</p>
                         </div>
                         <div className="flex items-center gap-1">
-                            <img src="../../../public/icons/email.png" alt="" />
+                            <img src="/icons/email.png" alt="" />
                             <p className="text-gray-400"><span className="font-bold text-black">Email : </span>{contact_information.email
 
                             }</p>
                         </div>
                         <div className="flex items-center gap-1">
-                            <img src="../../../public/icons/location2.png" alt="" />
+                            <img src="/icons/location2.png" alt="" />
                             <p className="text-gray-400"><span className="font-bold text-black">Address : </span>{contact_information.address
 
                             }</p>
